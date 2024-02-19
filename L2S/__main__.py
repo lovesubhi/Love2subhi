@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from L2S import LOGGER, app, userbot
-from L2S.core.call import TGN
+from L2S.core.call import Love
 from L2S.misc import sudo
 from L2S.plugins import ALL_MODULES
 from L2S.utils.database import get_banned_users, get_gbanned
@@ -38,9 +38,9 @@ async def init():
         importlib.import_module("L2S.plugins" + all_module)
     LOGGER("L2S.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await TGN.start()
+    await Love.start()
     try:
-        await TGN.stream_call("https://telegra.ph/file/69503142042c9f3b24c4c.mp4")
+        await Love.stream_call("https://telegra.ph/file/69503142042c9f3b24c4c.mp4")
     except NoActiveGroupCall:
         LOGGER("L2S").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
@@ -48,13 +48,13 @@ async def init():
         exit()
     except:
         pass
-    await TGN.decorators()
+    await Love.decorators()
     LOGGER("L2S").info(
-        "TGN Music Bot Started Successfully"
+        "Love Music Bot Started Successfully"
     )
     await idle()
     await app.stop()
-    LOGGER("L2S").info("Stopping TGN Music Bot...")
+    LOGGER("L2S").info("Stopping Love Music Bot...")
 
 
 if __name__ == "__main__":

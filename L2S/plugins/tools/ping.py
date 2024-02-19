@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from L2S import app
-from L2S.core.call import TGN
+from L2S.core.call import Love
 from L2S.utils import bot_sys_stats
 from L2S.utils.decorators.language import language
 from L2S.utils.inline import supp_markup
@@ -19,7 +19,7 @@ async def ping_com(client, message: Message, _):
         photo=PING_IMG_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await TGN.ping()
+    pytgping = await Love.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(

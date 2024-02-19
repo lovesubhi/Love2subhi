@@ -3,7 +3,7 @@ from datetime import datetime
 
 import config
 from L2S import app
-from L2S.core.call import TGN, autoend
+from L2S.core.call import Love, autoend
 from L2S.utils.database import (get_client, is_active_chat,
                                        is_autoend)
 
@@ -63,7 +63,7 @@ async def auto_end():
                     continue
                 autoend[chat_id] = {}
                 try:
-                    await TGN.stop_stream(chat_id)
+                    await Love.stop_stream(chat_id)
                 except:
                     continue
                 try:

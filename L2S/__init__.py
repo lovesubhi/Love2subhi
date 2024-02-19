@@ -1,4 +1,4 @@
-from L2S.core.bot import TGN
+from L2S.core.bot import Love
 from L2S.core.dir import dirr
 from L2S.core.git import git
 from L2S.core.userbot import Userbot
@@ -11,7 +11,7 @@ git()
 dbb()
 heroku()
 
-app = TGN()
+app = Love()
 userbot = Userbot()
 
 

@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from L2S import app
-from L2S.core.call import TGN
+from L2S.core.call import Love
 from L2S.misc import SUDOERS, db
 from L2S.utils import AdminRightsCheck
 from L2S.utils.database import is_active_chat, is_nonadmin_chat
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await TGN.speedup_stream(
+        await Love.speedup_stream(
             chat_id,
             file_path,
             speed,

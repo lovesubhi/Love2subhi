@@ -6,7 +6,7 @@ from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
 from L2S import app
-from L2S.core.call import TGN
+from L2S.core.call import Love
 from L2S.misc import db
 from L2S.utils.database import get_assistant, get_authuser_names, get_cmode
 from L2S.utils.decorators import ActualAdminCB, AdminActual, language
@@ -53,7 +53,7 @@ async def restartbot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await TGN.stop_stream_force(message.chat.id)
+        await Love.stop_stream_force(message.chat.id)
     except:
         pass
     userbot = await get_assistant(message.chat.id)
@@ -80,7 +80,7 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await TGN.stop_stream_force(chat_id)
+            await Love.stop_stream_force(chat_id)
         except:
             pass
     return await mystic.edit_text(_["reload_5"].format(app.mention))
