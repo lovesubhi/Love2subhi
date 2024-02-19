@@ -83,21 +83,7 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", [
-"https://telegra.ph/file/278774082fce47d172c69.jpg",
-"https://telegra.ph/file/d37bf7c86a9dfb15cb882.jpg",
-"https://telegra.ph/file/a52eff52b371bd280340c.jpg",
-"https://telegra.ph/file/0fcdf35ab5d54f16b1ca3.jpg",
-"https://telegra.ph/file/71595feefce7fa31a05cc.jpg",
-"https://telegra.ph/file/34d48ef1809fee8dd7475.jpg",
-"https://telegra.ph/file/19832f573094d09e46762.jpg",
-"https://telegra.ph/file/c1273112d4bddd5f03b7b.jpg",
-"https://telegra.ph/file/c3ebd7f45b134092c975f.jpg",
-"https://telegra.ph/file/f404b078a8ba6d731525b.jpg",
-"https://telegra.ph/file/025e1073360b2eca8d054.jpg",
-"https://telegra.ph/file/0badcb138fb62f5ad5495.jpg"
-
-]
+    "START_IMG_URL", "re"
 
 )
 PING_IMG_URL = getenv(
